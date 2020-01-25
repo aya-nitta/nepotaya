@@ -5,11 +5,11 @@
   --gap-double: 2rem;
 
   --bg: #fff;
-  --fg: #000;
-  --accents-1: #111;
-  --accents-2: #333;
+  --fg: #ffc0cb;
+  --accents-1: #ffc0cb;
+  --accents-2: #ffc0cb;
   --accents-3: #888;
-  --geist-foreground: #000;
+  --geist-foreground: #ffc0cb;
 
   --radius: 8px;
 
@@ -109,7 +109,7 @@ code[class*='language-css'] {
 }
 .token.selector,
 .language-autohotkey .token.keyword {
-  color: #00009f;
+  color: #ffc0cb;
 }
 .token.important,
 .token.bold {
