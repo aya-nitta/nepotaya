@@ -14,7 +14,7 @@ const Index: React.FC = () => (
         width="250"
         alt="ZEIT + Notion"
       />
-      <h1>My Notion Blog</h1>
+      <h1>Blog</h1>
       <h2>
         Blazing Fast Notion Blog with Next.js{' '}
         <ExtLink

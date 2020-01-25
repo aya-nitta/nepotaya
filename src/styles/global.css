@@ -6,10 +6,10 @@
 
   --bg: #fff;
   --fg: #ffc0cb;
-  --accents-1: #ffc0cb;
-  --accents-2: #ffc0cb;
+  --accents-1: #888;
+  --accents-2: #888;
   --accents-3: #888;
-  --geist-foreground: #ffc0cb;
+  --geist-foreground: #888;
 
   --radius: 8px;
 
@@ -252,7 +252,7 @@ figure {
 }
 
 a {
-  color: #0070f3;
+  color: #accaec;
   text-decoration: none;
 }
 a:hover {
