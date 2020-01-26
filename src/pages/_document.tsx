@@ -8,6 +8,14 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <ul>
+            <li>
+              <a herf="https://twitter.com/_nenenemo">twitter</a>
+            </li>
+            <li>
+              <a herf="https://www.instagram.com/_nenenemu/">instagram</a>
+            </li>
+          </ul>
         </body>
       </Html>
     )
