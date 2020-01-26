@@ -5,7 +5,8 @@
   --gap-double: 2rem;
 
   --bg: #fff;
-  --fg: #ffc0cb;
+  /* 真ん中太字　Blog */
+  --fg: #accaec;
   --accents-1: #888;
   --accents-2: #888;
   --accents-3: #888;
@@ -44,7 +45,7 @@ body {
 
 code[class*='language-'],
 pre[class*='language-'] {
-  color: #000;
+  color: #888;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -58,25 +59,25 @@ pre[class*='language-'] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #999;
+  color: #888;
 }
 .token.namespace {
   opacity: 0.7;
 }
 .token.string,
 .token.attr-value {
-  color: #028265;
+  color: #888;
 }
 .token.punctuation,
 .token.operator {
-  color: #000;
+  color: #888;
 }
 .token.url,
 .token.symbol,
 .token.boolean,
 .token.variable,
 .token.constant {
-  color: #36acaa;
+  color: #888;
 }
 .token.atrule,
 .language-autohotkey .token.selector,
@@ -88,7 +89,7 @@ code[class*='language-css'] {
   color: var(--geist-success);
 }
 .token.keyword {
-  color: #ff0078;
+  color: #888;
   font-weight: bolder;
 }
 .token.function,
@@ -122,7 +123,7 @@ code[class*='language-css'] {
 }
 .language-json .token.property,
 .language-markdown .token.title {
-  color: #000;
+  color: #888;
   font-weight: bolder;
 }
 .language-markdown .token.code {
@@ -150,7 +151,7 @@ code[class*='language-css'] {
 }
 .token.directive.tag .tag {
   background: #ff0;
-  color: #393a34;
+  color: #888;
 }
 /* dark */
 pre.dark[class*='language-'] {
@@ -348,7 +349,7 @@ code {
 }
 
 .dotted {
-  border-bottom: 1px dashed black;
+  border-bottom: 1px dashed #888;
 }
 
 footer {
