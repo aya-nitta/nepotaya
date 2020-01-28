@@ -1,5 +1,5 @@
+import * as React from 'react'
 // contact
-
 import Header from '../components/header'
 import ExtLink from '../components/ext-link'
 
@@ -28,7 +28,7 @@ const contacts = [
   // },
 ]
 
-const component: React.FC = () => (
+const Component: React.FC = () => (
   <>
     <Header titlePre="Contact" />
     <div className={sharedStyles.layout}>
@@ -50,4 +50,4 @@ const component: React.FC = () => (
   </>
 )
 
-export default component
+export default Component
