@@ -1,3 +1,4 @@
+// ねぽたとは
 import * as React from 'react'
 import Header from '~/components/header'
 import ExtLink from '../components/ext-link'
@@ -6,27 +7,11 @@ import sharedStyles from '../styles/shared.module.css'
 
 const Index: React.FC = () => (
   <>
-    <Header titlePre="Home" />
+    <Header titlePre="ねぽたとは" />
     <div className={sharedStyles.layout}>
-      <img
-        src="/zeit-and-notion.png"
-        height="85"
-        width="250"
-        alt="ZEIT + Notion"
-      />
-      <h1>Blog</h1>
-      <h2>
-        Blazing Fast Notion Blog with Next.js{' '}
-        <ExtLink
-          href="https://github.com/zeit/next.js/issues/9524"
-          className="dotted"
-          style={{ color: 'inherit' }}
-        >
-          SSG
-        </ExtLink>
-      </h2>
-
-      <Features />
+      <img src="/icon.png" alt="icon" width="100" height="100" />
+      <h1>ハジメマシテ。</h1>
+      <h2>まずは自己紹介から参りましょうか…</h2>
 
       <div className="explanation">
         <p>
