@@ -2,7 +2,7 @@ import * as React from 'react'
 import '../styles/global.css'
 import ExtLink from '../components/ext-link'
 
-const component: React.FC = ({ Component, pageProps }) => (
+const Component = ({ Component, pageProps }): React.ReactElement => (
   <>
     <Component {...pageProps} />
 
@@ -12,4 +12,4 @@ const component: React.FC = ({ Component, pageProps }) => (
   </>
 )
 
-export default component
+export default Component
