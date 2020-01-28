@@ -1,52 +1,42 @@
+// contact
+
 import Header from '../components/header'
 import ExtLink from '../components/ext-link'
 
 import sharedStyles from '../styles/shared.module.css'
 import contactStyles from '../styles/contact.module.css'
 
-import GitHub from '../components/svgs/github'
+import Instagram from '../components/svgs/instagram'
 import Twitter from '../components/svgs/twitter'
-import Envelope from '../components/svgs/envelope'
-import LinkedIn from '../components/svgs/linkedin'
+// import Envelope from '../components/svgs/envelope'
 
 const contacts = [
   {
     Comp: Twitter,
     alt: 'twitter icon',
-    link: 'https://twitter.com/_ijjk',
+    link: 'https://twitter.com/_nenenemo',
   },
   {
-    Comp: GitHub,
-    alt: 'github icon',
-    link: 'https://github.com/ijjk',
+    Comp: Instagram,
+    alt: 'instagram icon',
+    link: 'https://www.instagram.com/_nenenemu',
   },
-  {
-    Comp: LinkedIn,
-    alt: 'linkedin icon',
-    link: 'https://www.linkedin.com/in/jj-kasper-0b5392166/',
-  },
-  {
-    Comp: Envelope,
-    alt: 'envelope icon',
-    link: 'mailto:jj@jjsweb.site?subject=Notion Blog',
-  },
+  // {
+  //   Comp: Envelope,
+  //   alt: 'envelope icon',
+  //   link: 'mailto:jj@jjsweb.site?subject=Notion Blog',
+  // },
 ]
 
-export default () => (
+const component: React.FC = () => (
   <>
     <Header titlePre="Contact" />
     <div className={sharedStyles.layout}>
       <div className={contactStyles.avatar}>
-        <img src="/avatar.png" alt="avatar with letters JJ" height={60} />
+        <img src="/icon.png" alt="" height={60} />
       </div>
 
       <h1 style={{ marginTop: 0 }}>Contact</h1>
-
-      <div className={contactStyles.name}>
-        JJ Kasper - Next.js Engineer @{' '}
-        <ExtLink href="https://zeit.co">ZEIT</ExtLink>
-      </div>
-
       <div className={contactStyles.links}>
         {contacts.map(({ Comp, link, alt }) => {
           return (
@@ -59,3 +49,5 @@ export default () => (
     </div>
   </>
 )
+
+export default component
