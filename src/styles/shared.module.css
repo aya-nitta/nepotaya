@@ -9,3 +9,7 @@
 .layout h2 {
   text-align: center;
 }
+.layout p {
+  text-align: center;
+  color: #888;
+}
