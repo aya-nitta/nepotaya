@@ -1,5 +1,6 @@
 import Prism from 'prismjs'
 import 'prismjs/components/prism-jsx'
+import React from 'react'
 
 const Code = ({ children, language = 'javascript' }) => {
   return (
