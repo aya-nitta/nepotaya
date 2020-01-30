@@ -1,3 +1,4 @@
+//blog記事の中身
 import React from 'react'
 import Head from 'next/head'
 import Header from '../../components/header'
@@ -76,8 +77,6 @@ const RenderPost = ({ post, redirect }) => {
           <div className="posted">Posted: {getDateStr(post.Date)}</div>
         )}
 
-        <hr />
-
         {(!post.content || post.content.length === 0) && (
           <p>This post has no content</p>
         )}
@@ -87,7 +86,7 @@ const RenderPost = ({ post, redirect }) => {
           const { type, properties, id } = value
           const isLast = blockIdx === post.content.length - 1
           const isList = listTypes.has(type)
-          let toRender = []
+          const toRender = []
 
           if (isList) {
             listTagName = components[type === 'bulleted_list' ? 'ul' : 'ol']
