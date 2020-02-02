@@ -63,11 +63,10 @@ export default ({ posts = [] }) => {
                 <div className="authors">By: {post.Authors.join(' ')}</div>
               )}
               {post.Date && (
-                <div className="posted">Posted: {getDateStr(post.Date)}</div>
+                <div className="posted"> {getDateStr(post.Date)}</div>
               )}
               <p>
-                {(!post.preview || post.preview.length === 0) &&
-                  'No preview available'}
+                {(!post.preview || post.preview.length === 0) && 'ayayayaya'}
                 {(post.preview || []).map((block, idx) =>
                   textBlock(block, true, `${post.Slug}${idx}`)
                 )}
