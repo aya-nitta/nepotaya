@@ -73,9 +73,7 @@ const RenderPost = ({ post, redirect }) => {
         {post.Authors.length > 0 && (
           <div className="authors">By: {post.Authors.join(' ')}</div>
         )}
-        {post.Date && (
-          <div className="posted">Posted: {getDateStr(post.Date)}</div>
-        )}
+        {post.Date && <div className="posted"> {getDateStr(post.Date)}</div>}
 
         {(!post.content || post.content.length === 0) && (
           <p>This post has no content</p>
