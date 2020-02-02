@@ -285,11 +285,13 @@ mark {
   max-width: calc(100vw - var(--gap-double));
 }
 
+/* 全ページ上部　ねぽたや */
 h1 {
-  margin: var(--gap-double) 0 calc(0.5 * var(--gap)) 0;
+  margin: 5px;
   font-size: 2.25rem;
   font-weight: 300;
   letter-spacing: -0.05rem;
+  text-align: center;
 }
 
 h2 {
