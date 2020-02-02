@@ -14,9 +14,8 @@
   font-weight: 300;
   font-size: 0.95rem;
   line-height: 1.7;
-  width: 35rem;
-  max-width: 100vw;
-  padding: 0 2rem;
+  width: 1200px;
+  padding: 2px;
   background: var(--bg);
   margin: var(--gap-half)  auto;
   display: inline-block;
