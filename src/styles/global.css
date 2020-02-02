@@ -259,9 +259,12 @@ figure {
 a {
   color: #accaec;
   text-decoration: none;
+  background-color: white;
 }
 a:hover {
-  color: #3291ff;
+  color: #accaec;
+  background-color: whitesmoke;
+  border-radius: 10px;
 }
 
 .links {
