@@ -25,7 +25,7 @@ const Index: React.FC = () => (
         </p>
       </div>
 
-      <h3>Skillset</h3>
+      <h1>Skillset</h1>
 
       <div className="explanation2" />
       <p>html,css</p>
