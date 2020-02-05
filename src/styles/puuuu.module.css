@@ -1,0 +1,18 @@
+.layout img {
+  margin: auto;
+  max-width: 98%;
+  display: block;
+  height: auto;
+}
+
+.layout h1,
+.layout h2 {
+  text-align: center;
+}
+.layout p {
+  color: #888;
+  font-weight: 300;
+  font-size: 0.95rem;
+  display: inline-block;
+  text-align: left;
+}
