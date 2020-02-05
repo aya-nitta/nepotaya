@@ -9,7 +9,9 @@ const Index: React.FC = () => (
   <>
     <Header titlePre="ねぽたとは" />
     <div className={sharedStyles.layout}>
-      <img src="/icon.png" alt="icon" width="120" height="120" />
+      <a href="/name">
+        <img src="/icon.png" alt="icon" width="240" height="240" />
+      </a>
       <h1>ハジメマシテ。</h1>
       <h2>まずは自己紹介から参りましょうか…</h2>
 
