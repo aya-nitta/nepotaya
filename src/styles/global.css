@@ -1,3 +1,7 @@
+* {
+  text-align: center;
+}
+
 :root {
   --gap-quarter: 0.25rem;
   --gap-half: 0.5rem;
@@ -42,7 +46,6 @@ body {
 code[class*='language-'],
 pre[class*='language-'] {
   color: #888;
-  text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
@@ -222,28 +225,8 @@ pre.dark[class*='language-'] {
     font-size: 0.75rem;
   }
 }
-/* 自己紹介文章 */
-.explanation {
-  font-size: 0.95rem;
-  width: 5px;
-  max-width: 100vw;
-  padding: 0 2rem;
-  background: var(--bg);
-  margin: var(--gap-half) auto;
-  display: inline-block;
-  text-align: left;
-}
-/* Skillsetの中身 */
-.explanation2 {
-  font-size: 0.95rem;
-  width: 1200px;
-  padding: 2px;
-  background: var(--bg);
-  margin: var(--gap-half) auto;
-  display: inline-block;
-  text-align: left;
-}
 
+/* Skillsetの中身 */
 figure {
   font-size: 0.85rem;
   color: #999;
@@ -284,7 +267,6 @@ mark {
   max-width: calc(100vw - var(--gap-double));
 }
 
-/* 全ページ上部　ねぽたや */
 h1 {
   margin: 5px;
   font-size: 2.25rem;
@@ -294,6 +276,7 @@ h1 {
 }
 
 h2 {
+  margin: 5px;
   font-weight: 300;
   font-size: 1rem;
   letter-spacing: -0.02rem;
@@ -323,16 +306,11 @@ h3 {
 /* 自己紹介文章 */
 p {
   color: #888;
+  margin: 5px;
   font-weight: 300;
   font-size: 0.95rem;
-  line-height: 1.7;
-  width: 1200px;
-  max-width: 100vw;
-  padding: 0 2rem;
-  background: var(--bg);
-  margin: var(--gap-half) auto;
-  display: inline-block;
-  text-align: left;
+  letter-spacing: -0.05rem;
+  text-align: center;
 }
 pre {
   white-space: pre;
@@ -366,13 +344,8 @@ code {
 }
 
 @media (max-width: 600px) {
-  .explanation {
-    padding: 0 1rem 4rem;
-  }
-
   h2 {
     font-size: 0.95rem;
-    letter-spacing: 0;
   }
 }
 
