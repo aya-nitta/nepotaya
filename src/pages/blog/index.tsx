@@ -47,7 +47,6 @@ export default ({ posts = [] }) => {
     <>
       <Header titlePre="ねぽたや" />
       <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
-        <h1>ねぽたや</h1>
         {posts.length === 0 && (
           <p className={blogStyles.noPosts}>There are no posts yet</p>
         )}
@@ -63,11 +62,10 @@ export default ({ posts = [] }) => {
                 <div className="authors">By: {post.Authors.join(' ')}</div>
               )}
               {post.Date && (
-                <div className="posted">Posted: {getDateStr(post.Date)}</div>
+                <div className="posted"> {getDateStr(post.Date)}</div>
               )}
               <p>
-                {(!post.preview || post.preview.length === 0) &&
-                  'No preview available'}
+                {(!post.preview || post.preview.length === 0) && 'ayayayaya'}
                 {(post.preview || []).map((block, idx) =>
                   textBlock(block, true, `${post.Slug}${idx}`)
                 )}

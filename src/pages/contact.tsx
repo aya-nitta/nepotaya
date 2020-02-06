@@ -1,5 +1,5 @@
-import * as React from 'react'
 // contact
+import * as React from 'react'
 import Header from '../components/header'
 import ExtLink from '../components/ext-link'
 

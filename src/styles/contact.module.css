@@ -1,30 +1,31 @@
 .links {
   display: block;
   margin: 1rem auto;
-  max-width: 500px;
   text-align: center;
 }
 
+/* Twitterとinstagramアイコンの隙間 */
 .links a {
   width: 48px;
   height: 48px;
   margin: 0 10px;
   display: inline-block;
-  transition: opacity 200ms ease;
 }
 
 .links a:hover {
   opacity: 0.6;
 }
 
+/* アイコンの上下の余白 */
 .avatar {
   display: block;
   text-align: center;
   margin: 1rem 0;
 }
 
+/* contactアイコンの大きさ */
 .avatar img {
-  height: 120px;
+  height: 240px;
 }
 
 .name {
