@@ -32,5 +32,6 @@ module.exports = {
         html: true,
       },
     ],
+    'comma-dangle': ['error', 'never'],
   },
 }
