@@ -1,11 +1,14 @@
 // ねぽたとは
+// (1) import層
 import * as React from 'react'
+import styled from 'styled-components'
 import Header from '~/components/header'
-// import ExtLink from '../components/ext-link'
-// import Features from '../components/features'
 import sharedStyles from '../styles/shared.module.css'
+// (2) Types層
+// type ContainerProps = {}
+// type Props = { } & ContainerProps
 
-const Index: React.FC = () => (
+const Component: React.FC = () => (
   <>
     <Header titlePre="ねぽたとは" />
     <div className={sharedStyles.layout}>
@@ -30,5 +33,19 @@ const Index: React.FC = () => (
     </div>
   </>
 )
+// (4) Style層
+const StyledComponent = styled(Component)`
+  color: blue;
+  .btn {
+    color: yellow;
+  }
+  > button {
+    color: blue;
+  }
+`
+// (5) Container層
+const Container: React.FC = props => {
+  return <StyledComponent {...props} />
+}
 
-export default Index
+export default Container
