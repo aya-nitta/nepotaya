@@ -5,12 +5,12 @@
     "dev": "next dev --hostname=192.168.1.6",
     "start": "next start",
     "build": "next build && node .next/serverless/scripts/build-rss.js",
-    "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore",
-    "commit": "git-cz"
+    "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "prepare-commit-msg": "exec < /dev/tty && git-cz --hook || true"
     }
   },
   "dependencies": {
