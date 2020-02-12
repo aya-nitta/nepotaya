@@ -6,11 +6,11 @@ import Header from '~/components/header'
 // import sharedStyles from '../styles/shared.module.css'
 
 // (2) Types層
-// type ContainerProps = {}
-// type Props = { } & ContainerProps
+type ContainerProps = {}
+type Props = { className: string } & ContainerProps
 
-const Component: React.FC = () => (
-  <>
+const Component: React.FC<Props> = props => (
+  <div className={props.className}>
     <Header titlePre="ねぽたとは" />
 
     <a href="/name">
@@ -31,13 +31,11 @@ const Component: React.FC = () => (
 
     <h1>Skillset</h1>
     <p>html,css</p>
-  </>
+  </div>
 )
 // (4) Style層
 const StyledComponent = styled(Component)`
-  a {
-  }
-
+  color: blue;
   h1 {
     margin: 5px;
     font-size: 50px;
@@ -45,7 +43,6 @@ const StyledComponent = styled(Component)`
     text-align: center;
     color: #888;
   }
-
   h2 {
     margin: 5px;
     font-size: 50px;
@@ -53,7 +50,6 @@ const StyledComponent = styled(Component)`
     text-align: center;
     color: #888;
   }
-
   p {
   }
 `
@@ -65,7 +61,7 @@ const StyledComponent = styled(Component)`
 
 // (5) Container層
 const Container: React.FC = props => {
-  return <StyledComponent {...props} />
+  return <StyledComponent className="index" {...props} />
 }
 
 export default Container
