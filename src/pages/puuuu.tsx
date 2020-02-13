@@ -17,7 +17,7 @@ const Component: React.FC<Props> = props => (
     </a>
     <h1>毎度！</h1>
     <h2>今日も元気にやっとります！ぷぅです！</h2>
-
+    <br />
     <p>
       ノルウェージャンフォレストキャットのプータローと申します。
       <br />
@@ -27,9 +27,6 @@ const Component: React.FC<Props> = props => (
       <br />
       オモチャください。
     </p>
-
-    <h1>Skillset</h1>
-    <p>html,css</p>
   </div>
 )
 // (4) Style層
