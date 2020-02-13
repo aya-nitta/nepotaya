@@ -18,7 +18,7 @@ const Component: React.FC<Props> = props => (
     </a>
     <h1>ハジメマシテ。</h1>
     <h2>まずは自己紹介から参りましょうか…</h2>
-
+    <br />
     <p>
       性別は女
       <br />
@@ -28,7 +28,7 @@ const Component: React.FC<Props> = props => (
       <br />
       PUBG MOBILEのID （6106283530）{' '}
     </p>
-
+    <br />
     <h1>Skillset</h1>
     <p>html,css</p>
   </div>
