@@ -1,29 +1,67 @@
 // Puuuu!!
+// (1) import層
 import * as React from 'react'
 import Header from '../components/header'
-// import ExtLink from '../components/ext-link'
+import styled from 'styled-components'
 
-import PuuuuStyles from '../styles/puuuu.module.css'
+// (2) Types層
+type ContainerProps = {}
+type Props = { className: string } & ContainerProps
+// (3) DOM層
+const Component: React.FC<Props> = props => (
+  <div className={props.className}>
+    <Header titlePre="おプゥの部屋" />
 
-const Index: React.FC = () => (
-  <>
-    <Header titlePre="ねぽたとは" />
-    <div className={PuuuuStyles.layout}>
+    <a href="/name">
       <img src="/puuuu.png" alt="icon" width="240" height="240" />
-      <h1>毎度！</h1>
-      <h2>今日も元気にやっとります！ぷぅです！</h2>
+    </a>
+    <h1>毎度！</h1>
+    <h2>今日も元気にやっとります！ぷぅです！</h2>
 
-      <p>
-        ノルウェージャンフォレストキャットのプータローと申します。
-        <br />
-        性別は男
-        <br />
-        生まれは2019年8月15日
-        <br />
-        オモチャください。
-      </p>
-    </div>
-  </>
+    <p>
+      ノルウェージャンフォレストキャットのプータローと申します。
+      <br />
+      性別は男
+      <br />
+      生まれは2019年8月15日
+      <br />
+      オモチャください。
+    </p>
+
+    <h1>Skillset</h1>
+    <p>html,css</p>
+  </div>
 )
+// (4) Style層
+const StyledComponent = styled(Component)`
+  color: #888;
+  text-align: center;
+  a {
+    margin: 5px;
+    font-size: 30px;
+  }
+  h1 {
+    margin: 5px;
+    font-size: 30px;
+  }
+  h2 {
+    margin: 5px;
+    font-size: 30px;
+  }
+  p {
+    margin: 5px;
+    font-size: 30px;
+  }
+`
+// color: blue;
+// .btn {
+//   color: yellow;
+// }
+// > button {
 
-export default Index
+// (5) Container層
+const Container: React.FC = props => {
+  return <StyledComponent className="puuuu" {...props} />
+}
+
+export default Container
