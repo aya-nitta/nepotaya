@@ -3,12 +3,12 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import Header from '~/components/header'
-// import sharedStyles from '../styles/shared.module.css'
 
 // (2) Types層
 type ContainerProps = {}
 type Props = { className: string } & ContainerProps
 
+// (3) DOM層
 const Component: React.FC<Props> = props => (
   <div className={props.className}>
     <Header titlePre="ねぽたとは" />
@@ -35,22 +35,23 @@ const Component: React.FC<Props> = props => (
 )
 // (4) Style層
 const StyledComponent = styled(Component)`
-  color: blue;
+  color: #888;
+  text-align: center;
+  a {
+    margin: 5px;
+    font-size: 30px;
+  }
   h1 {
     margin: 5px;
-    font-size: 50px;
-    font-weight: 300;
-    text-align: center;
-    color: #888;
+    font-size: 30px;
   }
   h2 {
     margin: 5px;
-    font-size: 50px;
-    font-weight: 300;
-    text-align: center;
-    color: #888;
+    font-size: 30px;
   }
   p {
+    margin: 5px;
+    font-size: 30px;
   }
 `
 // color: blue;
