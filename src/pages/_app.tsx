@@ -1,5 +1,4 @@
 import * as React from 'react'
-// import '../styles/global.css'
 import ExtLink from '../components/ext-link'
 
 const Component = ({ Component, pageProps }): React.ReactElement => (

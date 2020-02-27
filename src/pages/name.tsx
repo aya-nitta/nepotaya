@@ -1,7 +1,7 @@
 // Puuuu!!
 // (1) import層
 import * as React from 'react'
-import Header from '../components/header'
+import Header from '../components/_app/Header'
 // import ExtLink from '../components/ext-link'
 
 import styled from 'styled-components'
@@ -13,7 +13,7 @@ type Props = { className: string } & ContainerProps
 // (3) DOM層
 const Component: React.FC<Props> = props => (
   <div className={props.className}>
-    <Header titlePre="今までの名前" />
+    <Header />
 
     <a href="/name">
       <img src="/icon2.JPG" alt="icon" width="240" height="240" />
