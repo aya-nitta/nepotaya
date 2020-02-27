@@ -21,7 +21,7 @@ type Props = {
 // (3) DOM層
 const Component: React.FC<Props> = props => (
   <header className={props.className}>
-    <h1>ねぽたや</h1>
+    <h1>nepotaya</h1>
     <ul>
       {props.navItems.map(({ label, page, link }) => (
         <div key={label}>
@@ -39,12 +39,18 @@ const Component: React.FC<Props> = props => (
 
 // // (4) Style層
 const StyledComponent = styled(Component)`
-  color: #888;
+  color: black;
   h1 {
     float: left;
-    padding: 30px 0;
-    padding: 30px;
+    margin: 0;
+    padding: 30px 30px;
+    background-image: linear-gradient(92deg, black 0%, #888 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hue 60s infinite linear;
   }
+
   /* >はheader直下の */
   > ul {
     list-style: none; /*点を消す*/
@@ -60,8 +66,8 @@ const Container: React.FC<ContainerProps> = props => {
   const navItems: NavItemsTypes = [
     { label: 'nepota?', page: '/' },
     { label: 'blog', page: '/blog' },
-    { label: 'contact', page: '/contact' },
-    { label: 'puuuu!', page: '/puuuu' }
+    { label: 'puuuu', page: '/puuuu' },
+    { label: 'contact', page: '/contact' }
   ]
 
   const { pathname } = useRouter()

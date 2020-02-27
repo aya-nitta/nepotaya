@@ -30,14 +30,18 @@ const Component: React.FC<Props> = props => (
 const StyledComponent = styled(Component)`
   > a {
     color: #888;
-    transition: 0.5s;
+    transition: 0.2s;
     text-decoration: none; /* リンクの下線を消す */
-    margin: 30px;
+    margin: 50px;
   }
   > a.active {
     color: black;
     font-size: 30px;
     font-weight: bold;
+    padding: 0.5em 1em;
+    background: #fff;
+    border: dashed 2px black; /*点線*/
+    border-radius: 10px; /*角の丸み*/
   }
   > a:hover {
     color: black;
