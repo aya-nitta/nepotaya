@@ -11,14 +11,15 @@ type NavItemsTypes = {
   link?: string
 }[]
 type ContainerProps = {}
-type Props = {
+
+type ComponentProps = {
   navItems: NavItemsTypes
   pathname: string
   className: string
 } & ContainerProps
 
 // (3) DOM層
-const Component: React.FC<Props> = props => (
+const Component: React.FC<ComponentProps> = props => (
   <header className={props.className}>
     <h1>nepotaya</h1>
     <ul>
