@@ -1,53 +1,78 @@
-// contact
 import * as React from 'react'
-import Header from '../components/header'
+import styled from 'styled-components'
+import Header from '../components/_app/Header'
 import ExtLink from '../components/ext-link'
-
-import sharedStyles from '../styles/shared.module.css'
-import contactStyles from '../styles/contact.module.css'
-
 import Instagram from '../components/svgs/instagram'
 import Twitter from '../components/svgs/twitter'
-// import Envelope from '../components/svgs/envelope'
+import Envelope from '../components/svgs/envelope'
 
-const contacts = [
-  {
-    Comp: Twitter,
-    alt: 'twitter icon',
-    link: 'https://twitter.com/_nenenemo',
-  },
-  {
-    Comp: Instagram,
-    alt: 'instagram icon',
-    link: 'https://www.instagram.com/_nenenemu',
-  },
-  // {
-  //   Comp: Envelope,
-  //   alt: 'envelope icon',
-  //   link: 'mailto:jj@jjsweb.site?subject=Notion Blog',
-  // },
-]
+type ContainerProps = {}
+type Props = {
+  className: string
+  contacts: {
+    Icon: React.FC
+    alt: string
+    link: string
+  }[]
+} & ContainerProps
 
-const Component: React.FC = () => (
-  <>
-    <Header titlePre="Contact" />
-    <div className={sharedStyles.layout}>
-      <div className={contactStyles.avatar}>
-        <img src="/icon.png" alt="" height={60} />
-      </div>
+const Component: React.FC<Props> = props => {
+  return (
+    <div className={props.className}>
+      <Header />
+      <img src="/icon.png" alt="icon" width="240" height="240" />
+      <h1>Contact</h1>
 
-      <h1 style={{ marginTop: 0 }}>Contact</h1>
-      <div className={contactStyles.links}>
-        {contacts.map(({ Comp, link, alt }) => {
-          return (
-            <ExtLink key={link} href={link} aria-label={alt}>
-              <Comp height={32} />
-            </ExtLink>
-          )
-        })}
-      </div>
+      {props.contacts.map(({ Icon, link, alt }) => {
+        return (
+          <ExtLink key={link} href={link} aria-label={alt}>
+            <Icon />
+          </ExtLink>
+        )
+      })}
     </div>
-  </>
-)
+  )
+}
 
-export default Component
+const StyledComponent = styled(Component)`
+  background-color: #fff;
+  color: black;
+  text-align: center;
+  img {
+  }
+  a {
+    font-size: 30px;
+  }
+
+  h2 {
+    margin: 5px;
+    font-size: 30px;
+  }
+  p {
+    margin: 5px;
+    font-size: 30px;
+  }
+`
+
+const Container: React.FC = props => {
+  const contacts = [
+    {
+      Icon: Twitter,
+      alt: 'twitter icon',
+      link: 'https://twitter.com/_nenenemo'
+    },
+    {
+      Icon: Instagram,
+      alt: 'instagram icon',
+      link: 'https://www.instagram.com/_nenenemu'
+    },
+    {
+      Icon: Envelope,
+      alt: 'envelope icon',
+      link: 'mailto:jj@jjsweb.site?subject=Notion Blog'
+    }
+  ]
+  return <StyledComponent className="contact" contacts={contacts} {...props} />
+}
+
+export default Container

@@ -1,15 +1,15 @@
 module.exports = {
   env: {
     es6: true,
-    node: true,
+    node: true
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     version: 2018,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true,
-    },
+      jsx: true
+    }
   },
   extends: [
     'eslint:recommended',
@@ -18,7 +18,7 @@ module.exports = {
     'prettier/react',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
-    'prettier/@typescript-eslint',
+    'prettier/@typescript-eslint'
   ],
   plugins: ['react', 'prettier', '@typescript-eslint'],
   // add your custom rules here
@@ -29,9 +29,8 @@ module.exports = {
       'error',
       {
         component: true,
-        html: true,
-      },
-    ],
-    'comma-dangle': ['error', 'never'],
-  },
+        html: true
+      }
+    ]
+  }
 }
