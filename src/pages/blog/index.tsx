@@ -1,19 +1,74 @@
+import * as React from 'react'
+import styled from 'styled-components'
 import Link from 'next/link'
-import Header from '../../components/header'
-
-import blogStyles from '../../styles/blog.module.css'
-import sharedStyles from '../../styles/shared.module.css'
-
 import { getBlogLink, getDateStr, postIsReady } from '../../lib/blog-helpers'
 import { textBlock } from '../../lib/notion/renderers'
-import getNotionUsers from '../../lib/notion/getNotionUsers'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 
-export async function unstable_getStaticProps() {
-  const postsTable = await getBlogIndex()
+type PostsTypes = {
+  id: string
+  Slug: string
+  Date: number
+  Published: string
+  Page: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  preview: any[]
+}[]
+type ContainerProps = {
+  posts: PostsTypes
+}
+type Props = {
+  className: string
+} & ContainerProps
 
+const Component: React.FC<Props> = props => (
+  <div className={props.className}>
+    {props.posts.length === 0 && <p>There are no posts yet</p>}
+    {props.posts.map(post => {
+      return (
+        <div key={post.Slug}>
+          <h3>
+            <Link href="/articles/[slug]" as={getBlogLink(post.Slug)}>
+              <a>{post.Page}</a>
+            </Link>
+          </h3>
+          {post.Date && (
+            <div className="posted">Posted: {getDateStr(post.Date)}</div>
+          )}
+        </div>
+      )
+    })}
+  </div>
+)
+
+const StyledComponent = styled(Component)`
+  margin: 0 auto;
+  padding: 60px;
+  width: 75%;
+  color: gray;
+  font-size: 1.4rem;
+  line-height: 2;
+  > div {
+    margin-bottom: 60px;
+  }
+`
+
+const Container: React.FC<ContainerProps> = props => {
+  return <StyledComponent className="articles" {...props} />
+}
+
+export default Container
+
+// eslint-disable-next-line @typescript-eslint/camelcase
+export const unstable_getStaticProps = async (): Promise<{
+  props: {
+    posts: PostsTypes
+  }
+  revalidate: number
+}> => {
+  const postsTable = await getBlogIndex()
   const authorsToGet: Set<string> = new Set()
-  const posts: any[] = Object.keys(postsTable)
+  const posts = Object.keys(postsTable)
     .map(slug => {
       const post = postsTable[slug]
       // remove draft posts in production
@@ -27,53 +82,10 @@ export async function unstable_getStaticProps() {
       return post
     })
     .filter(Boolean)
-
-  const { users } = await getNotionUsers([...authorsToGet])
-
-  posts.map(post => {
-    post.Authors = post.Authors.map(id => users[id].full_name)
-  })
-
   return {
     props: {
-      posts,
+      posts
     },
-    revalidate: 10,
+    revalidate: 10
   }
-}
-
-export default ({ posts = [] }) => {
-  return (
-    <>
-      <Header titlePre="ねぽたや" />
-      <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
-        {posts.length === 0 && (
-          <p className={blogStyles.noPosts}>There are no posts yet</p>
-        )}
-        {posts.map(post => {
-          return (
-            <div className={blogStyles.postPreview} key={post.Slug}>
-              <h3>
-                <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                  <a>{post.Page}</a>
-                </Link>
-              </h3>
-              {post.Authors.length > 0 && (
-                <div className="authors">By: {post.Authors.join(' ')}</div>
-              )}
-              {post.Date && (
-                <div className="posted"> {getDateStr(post.Date)}</div>
-              )}
-              <p>
-                {(!post.preview || post.preview.length === 0) && 'ayayayaya'}
-                {(post.preview || []).map((block, idx) =>
-                  textBlock(block, true, `${post.Slug}${idx}`)
-                )}
-              </p>
-            </div>
-          )
-        })}
-      </div>
-    </>
-  )
 }
