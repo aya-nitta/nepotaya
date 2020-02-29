@@ -49,7 +49,7 @@ const StyledComponent = styled(Component)`
 `
 
 const Container: React.FC<ContainerProps> = props => {
-  return <StyledComponent {...props} />
+  return <StyledComponent className="list" {...props} />
 }
 
 export default Container

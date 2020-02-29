@@ -13,7 +13,6 @@ type NavItemsTypes = {
 type ContainerProps = {}
 type Props = {
   navItems: NavItemsTypes
-  ogImageUrl: string
   pathname: string
   className: string
 } & ContainerProps
