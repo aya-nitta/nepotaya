@@ -14,12 +14,8 @@ type Props = { className: string } & ContainerProps
 const Component: React.FC<Props> = props => (
   <div className={props.className}>
     <Header />
-
-    <a href="/name">
-      <img src="/icon2.JPG" alt="icon" width="240" height="240" />
-    </a>
+    <img src="/icon2.JPG" alt="icon" width="240" height="240" />
     <h2>ここでは今までに使用した名前を載せています&#x1f624;</h2>
-
     <p>
       <br />
       ねむこ

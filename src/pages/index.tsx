@@ -2,7 +2,6 @@
 // (1) import層
 import * as React from 'react'
 import styled from 'styled-components'
-
 import Header from '~/components/_app/Header'
 
 // (2) Types層
