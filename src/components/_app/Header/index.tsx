@@ -67,7 +67,8 @@ const Container: React.FC<ContainerProps> = props => {
     { label: 'nepota?', page: '/' },
     { label: 'blog', page: '/blog' },
     { label: 'puuuu', page: '/puuuu' },
-    { label: 'contact', page: '/contact' }
+    { label: 'contact', page: '/contact' },
+    { label: 'animations', page: '/animations' }
   ]
 
   const { pathname } = useRouter()
