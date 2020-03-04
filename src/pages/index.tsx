@@ -12,10 +12,6 @@ type Props = { className: string } & ContainerProps
 const Component: React.FC<Props> = props => (
   <div className={props.className}>
     <Header />
-
-    <a href="/name">
-      <img src="/icon.png" alt="icon" width="240" height="240" />
-    </a>
     <h2>ハジメマシテ。</h2>
     <h2>まずは自己紹介から参りましょうか…</h2>
     <br />
@@ -42,7 +38,6 @@ const StyledComponent = styled(Component)`
   }
   h2 {
     margin: 5px;
-    font-size: 20px;
   }
 `
 // (5) Container層
