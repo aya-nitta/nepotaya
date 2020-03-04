@@ -1,8 +1,8 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
+import Header from '~/components/_app/Header'
 import { getBlogLink, getDateStr, postIsReady } from '../../lib/blog-helpers'
-import { textBlock } from '../../lib/notion/renderers'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 
 type PostsTypes = {
@@ -23,6 +23,7 @@ type Props = {
 
 const Component: React.FC<Props> = props => (
   <div className={props.className}>
+    <Header />
     {props.posts.length === 0 && <p>There are no posts yet</p>}
     {props.posts.map(post => {
       return (
@@ -43,10 +44,10 @@ const Component: React.FC<Props> = props => (
 
 const StyledComponent = styled(Component)`
   margin: 0 auto;
-  padding: 60px;
+  padding: 30px;
   width: 75%;
   color: gray;
-  font-size: 1.4rem;
+  font-size: 30px;
   line-height: 2;
   > div {
     margin-bottom: 60px;
