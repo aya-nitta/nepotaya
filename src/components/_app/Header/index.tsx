@@ -44,11 +44,17 @@ const StyledComponent = styled(Component)`
     float: left;
     margin: 0;
     padding: 30px 30px;
-    background-image: linear-gradient(92deg, black 0%, #888 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: hue 60s infinite linear;
+    background-image: linear-gradient(
+      92deg,
+      black 0%,
+      #888 100%
+    ); /*左から右へのグラデーション */
+
+    /* url('/icon2.JPG'); 画像を透過する*/
+
+    -webkit-background-clip: text; /*テキスト部分に背景画像を適応させる*/
+    /* -webkit-text-fill-color: transparent; インラインフレームの背景を透過させる */
+    color: transparent; /*カラーが透明になる*/
   }
 
   /* >はheader直下の */
