@@ -1,7 +1,6 @@
 //blog記事の中身
 import React from 'react'
 import Head from 'next/head'
-import Header from '../../components/header'
 import Heading from '../../components/heading'
 import components from '../../components/dynamic'
 import ReactJSXParser from '@zeit/react-jsx-parser'
@@ -22,9 +21,9 @@ export async function unstable_getStaticProps({ params: { slug } }) {
     console.log(`Failed to find post for slug: ${slug}`)
     return {
       props: {
-        redirect: '/blog',
+        redirect: '/blog'
       },
-      revalidate: 5,
+      revalidate: 5
     }
   }
   const postData = await getPageData(post.id)
@@ -35,9 +34,9 @@ export async function unstable_getStaticProps({ params: { slug } }) {
 
   return {
     props: {
-      post,
+      post
     },
-    revalidate: 10,
+    revalidate: 10
   }
 }
 

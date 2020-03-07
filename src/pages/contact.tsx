@@ -1,6 +1,5 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import Header from '../components/_app/Header'
 import ExtLink from '../components/ext-link'
 import Instagram from '../components/svgs/instagram'
 import Twitter from '../components/svgs/twitter'
@@ -19,7 +18,6 @@ type Props = {
 const Component: React.FC<Props> = props => {
   return (
     <div className={props.className}>
-      <Header />
       <img src="/icon.png" alt="icon" width="240" height="240" />
       <h1>Contact</h1>
 

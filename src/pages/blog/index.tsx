@@ -1,7 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
-import Header from '~/components/_app/Header'
 import { getBlogLink, getDateStr, postIsReady } from '../../lib/blog-helpers'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 
@@ -23,7 +22,6 @@ type Props = {
 
 const Component: React.FC<Props> = props => (
   <div className={props.className}>
-    <Header />
     {props.posts.length === 0 && <p>There are no posts yet</p>}
     {props.posts.map(post => {
       return (

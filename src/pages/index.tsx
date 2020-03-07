@@ -2,7 +2,6 @@
 // (1) import層
 import * as React from 'react'
 import styled from 'styled-components'
-import Header from '~/components/_app/Header'
 
 // (2) Types層
 type ContainerProps = {}
@@ -11,7 +10,6 @@ type Props = { className: string } & ContainerProps
 // (3) DOM層
 const Component: React.FC<Props> = props => (
   <div className={props.className}>
-    <Header />
     <h2>ハジメマシテ。</h2>
     <h2>まずは自己紹介から参りましょうか…</h2>
     <br />

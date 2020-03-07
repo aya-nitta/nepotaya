@@ -1,7 +1,6 @@
 // Puuuu!!
 // (1) import層
 import * as React from 'react'
-import Header from '../components/_app/Header'
 import styled from 'styled-components'
 
 // (2) Types層
@@ -10,7 +9,6 @@ type Props = { className: string } & ContainerProps
 // (3) DOM層
 const Component: React.FC<Props> = props => (
   <div className={props.className}>
-    <Header />
     <img src="/puuuu.png" alt="icon" width="240" height="240" />
     <h2>毎度！今日も元気にやっとります！ぷぅです！</h2>
     <br />
