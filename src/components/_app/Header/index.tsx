@@ -43,7 +43,7 @@ const StyledComponent = styled(Component)`
   h1 {
     float: left;
     margin: 0;
-    padding: 30px 30px;
+    padding: 15px 30px;
     background-image: linear-gradient(
       92deg,
       black 0%,
@@ -74,7 +74,7 @@ const Container: React.FC<ContainerProps> = props => {
     { label: 'blog', page: '/blog' },
     { label: 'puuuu', page: '/puuuu' },
     { label: 'contact', page: '/contact' },
-    { label: 'animations', page: '/animations' }
+    { label: 'animations', page: '/animations/index' }
   ]
 
   const { pathname } = useRouter()

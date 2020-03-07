@@ -36,7 +36,6 @@ const StyledComponent = styled(Component)`
   }
   > a.active {
     color: black;
-    font-size: 30px;
     font-weight: bold;
     padding: 0.5em 1em;
     background: #fff;
