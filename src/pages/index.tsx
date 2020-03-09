@@ -1,4 +1,4 @@
-// ねぽたとは
+// nepota?
 // (1) import層
 import * as React from 'react'
 import styled from 'styled-components'
@@ -10,11 +10,11 @@ type Props = { className: string } & ContainerProps
 // (3) DOM層
 const Component: React.FC<Props> = props => (
   <div className={props.className}>
-    <h2>ハジメマシテ。</h2>
-    <h2>まずは自己紹介から参りましょうか…</h2>
-    <br />
+    <h3>ハジメマシテ!!</h3>
     <p>
-      性別は女
+      ネポタと申します。
+      <br />
+      性別は女です。
       <br />
       旦那さんとノルウェージャンフォレストキャットのプータローと暮らしています。
       <br />
@@ -23,20 +23,17 @@ const Component: React.FC<Props> = props => (
       PUBG MOBILEのID （6106283530）{' '}
     </p>
     <br />
-    <h1>Skillset</h1>
-    <p>html,css</p>
+    {/* <h3>Skillset</h3>
+    <p>html,css</p> */}
   </div>
 )
 // (4) Style層
 const StyledComponent = styled(Component)`
+  margin: 0 auto;
+  width: 600px;
   color: black;
-  text-align: center;
-  a {
-    font-size: 30px;
-  }
-  h2 {
-    margin: 5px;
-  }
+
+  /* ブロック、インラインブロックの違いに注意 */
 `
 // (5) Container層
 const Container: React.FC = props => {

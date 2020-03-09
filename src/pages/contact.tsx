@@ -18,8 +18,7 @@ type Props = {
 const Component: React.FC<Props> = props => {
   return (
     <div className={props.className}>
-      <img src="/icon.png" alt="icon" width="240" height="240" />
-      <h1>Contact</h1>
+      <h3>Contact</h3>
 
       {props.contacts.map(({ Icon, link, alt }) => {
         return (
@@ -35,20 +34,11 @@ const Component: React.FC<Props> = props => {
 const StyledComponent = styled(Component)`
   background-color: #fff;
   color: black;
-  text-align: center;
-  img {
-  }
-  a {
-    font-size: 30px;
-  }
-
-  h2 {
-    margin: 5px;
-    font-size: 30px;
-  }
-  p {
-    margin: 5px;
-    font-size: 30px;
+  margin: 0 auto;
+  width: 600px;
+  h3 {
+    display: block;
+    text-align: center;
   }
 `
 

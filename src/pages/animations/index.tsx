@@ -30,9 +30,9 @@ const Component: React.FC<Props> = props => (
       </li>
     </ul>
 
-    <h3 id="i1">1111111</h3>
+    <div id="i1">1111111</div>
 
-    <h3 id="i2">222222</h3>
+    <div id="i2">222222</div>
   </div>
 )
 // (4) Style層

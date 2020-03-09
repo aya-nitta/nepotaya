@@ -10,14 +10,13 @@ type Props = { className: string } & ContainerProps
 const Component: React.FC<Props> = props => (
   <div className={props.className}>
     <img src="/puuuu.png" alt="icon" width="240" height="240" />
-    <h2>毎度！今日も元気にやっとります！ぷぅです！</h2>
+    <h3>一緒に暮らしているノルウェーフォレストキャットのプータローです。</h3>
     <br />
+    通称ぷーち。
     <p>
-      ノルウェージャンフォレストキャットのプータローと申します。
+      性別は男です。
       <br />
-      性別は男
-      <br />
-      生まれは2019年8月15日
+      生まれは2019年8月15日。
       <br />
       オモチャください。
     </p>
@@ -26,14 +25,11 @@ const Component: React.FC<Props> = props => (
 // (4) Style層
 const StyledComponent = styled(Component)`
   color: black;
-  text-align: center;
-  a {
-    font-size: 30px;
-  }
-
-  h2 p {
-    margin: 5px;
-    font-size: 20px;
+  margin: 0 auto;
+  width: 600px;
+  h3 {
+    display: block;
+    text-align: center;
   }
 `
 // (5) Container層
