@@ -31,12 +31,12 @@ const Component: React.FC<Props> = props => (
               <a>{post.Page}</a>
             </Link>
           </p>
-          {post.Date && (
+          {/* { {post.Date && (
             <div className="posted">Posted: {getDateStr(post.Date)}</div>
-          )}
+          )} */}
         </div>
       )
-    })}
+    })}{' '}
   </div>
 )
 
