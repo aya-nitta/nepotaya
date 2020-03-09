@@ -26,11 +26,11 @@ const Component: React.FC<Props> = props => (
     {props.posts.map(post => {
       return (
         <div key={post.Slug}>
-          <h3>
+          <p>
             <Link href="/articles/[slug]" as={getBlogLink(post.Slug)}>
               <a>{post.Page}</a>
             </Link>
-          </h3>
+          </p>
           {post.Date && (
             <div className="posted">Posted: {getDateStr(post.Date)}</div>
           )}
@@ -41,14 +41,18 @@ const Component: React.FC<Props> = props => (
 )
 
 const StyledComponent = styled(Component)`
+  color: black;
   margin: 0 auto;
-  padding: 30px;
-  width: 75%;
-  color: gray;
-  font-size: 30px;
-  line-height: 2;
-  > div {
-    margin-bottom: 60px;
+  width: 600px;
+  * > a {
+    color: #888;
+    text-decoration: none; /* リンクの下線を消す */
+  }
+  * > a:hover {
+    color: black;
+  }
+  .posted {
+    color: #888;
   }
 `
 
