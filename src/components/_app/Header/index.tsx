@@ -21,7 +21,7 @@ type ComponentProps = {
 // (3) DOM層
 const Component: React.FC<ComponentProps> = props => (
   <header className={props.className}>
-    <h1>nepotaya</h1>
+    <h1>nepota!</h1>
     <ul>
       {props.navItems.map(({ label, page, link }) => (
         <div key={label}>
@@ -72,7 +72,7 @@ const Container: React.FC<ContainerProps> = props => {
   const navItems: NavItemsTypes = [
     { label: 'nepota?', page: '/' },
     { label: 'blog', page: '/blog' },
-    { label: 'puuuu', page: '/puuuu' },
+    { label: 'puuuu?', page: '/puuuu' },
     { label: 'contact', page: '/contact' },
     { label: 'animations', page: '/animations/index' }
   ]
