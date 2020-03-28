@@ -41,20 +41,35 @@ const Component: React.FC<ComponentProps> = props => (
 const StyledComponent = styled(Component)`
   color: black;
   h1 {
+    color: transparent; /*カラーが透明になる*/
     float: left;
     margin: 0;
     padding: 15px 30px;
-    background-image: linear-gradient(
+    /* 3つの色を45度の角度でグラデーションさせてから、バックグラウンドのサイズを600%とオーバーサイズにすることで画面には1色がアップされて表示される */
+    background: linear-gradient(45deg, #6cb8ff, #fff66c, #ffa36c);
+    background-size: 600% 600%;
+    animation: AnimationName 20s ease infinite;
+    -webkit-background-clip: text;
+    /*テキスト部分に背景画像を適応させる*/
+    /* -webkit-text-fill-color: transparent; インラインフレームの背景を透過させる */
+    /* background-image: linear-gradient(
       92deg,
       black 0%,
       #888 100%
-    ); /*左から右へのグラデーション */
-
+    ); 左から右へのグラデーション */
     /* url('/icon2.JPG'); 画像を透過する*/
+  }
 
-    -webkit-background-clip: text; /*テキスト部分に背景画像を適応させる*/
-    /* -webkit-text-fill-color: transparent; インラインフレームの背景を透過させる */
-    color: transparent; /*カラーが透明になる*/
+  @keyframes AnimationName {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
   /* >はheader直下の */
@@ -71,7 +86,7 @@ const StyledComponent = styled(Component)`
 const Container: React.FC<ContainerProps> = props => {
   const navItems: NavItemsTypes = [
     { label: 'nepota?', page: '/' },
-    { label: 'blog', page: '/blog' },
+    { label: 'blog / recipe', page: '/blog' },
     { label: 'puuuu?', page: '/puuuu' },
     { label: 'contact', page: '/contact' },
     { label: 'animations', page: '/animations/index' }

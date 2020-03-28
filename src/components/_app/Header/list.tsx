@@ -33,17 +33,22 @@ const StyledComponent = styled(Component)`
     transition: 0.2s;
     text-decoration: none; /* リンクの下線を消す */
     margin: 50px;
+    padding: 0.5em 1em;
+    border-radius: 10px; /* 角の丸み*/
   }
   > a.active {
     color: black;
     font-weight: bold;
     padding: 0.5em 1em;
     background: #fff;
-    border: dashed 2px black; /*点線*/
-    border-radius: 10px; /*角の丸み*/
+    border-radius: 10px; /* 角の丸み*/
+    /* border: dashed 2px black; 点線*/
   }
   > a:hover {
+    background: #fff;
     color: black;
+    border-radius: 10px; /* 角の丸み*/
+    padding: 0.5em 1em;
   }
 `
 
