@@ -1,8 +1,8 @@
 export default props => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    height="50px"
-    width="50px"
+    height="25px"
+    width="25px"
     viewBox="0 0 511 511.9"
   >
     <g>
