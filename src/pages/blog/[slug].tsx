@@ -1,7 +1,6 @@
 //blog記事の中身
 import React from 'react'
 import Head from 'next/head'
-import Heading from '../../components/heading'
 import components from '../../components/dynamic'
 import ReactJSXParser from '@zeit/react-jsx-parser'
 import blogStyles from '../../styles/blog.module.css'
@@ -66,13 +65,12 @@ const RenderPost = ({ post, redirect }) => {
 
   return (
     <>
-      <Header titlePre={post.Page} />
       <div className={blogStyles.post}>
         <h1>{post.Page || ''}</h1>
         {post.Authors.length > 0 && (
           <div className="authors">By: {post.Authors.join(' ')}</div>
         )}
-        {post.Date && <div className="posted"> {getDateStr(post.Date)}</div>}
+        {/* {post.Date && <div className="posted"> {getDateStr(post.Date)}</div>} */}
 
         {(!post.content || post.content.length === 0) && (
           <p>This post has no content</p>
@@ -112,9 +110,9 @@ const RenderPost = ({ post, redirect }) => {
 
           const renderHeading = (Type: string | React.ComponentType) => {
             toRender.push(
-              <Heading key={id}>
+              <Head key={id}>
                 <Type key={id}>{textBlock(properties.title, true, id)}</Type>
-              </Heading>
+              </Head>
             )
           }
 
