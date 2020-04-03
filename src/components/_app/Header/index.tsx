@@ -42,9 +42,8 @@ const StyledComponent = styled(Component)`
   color: black;
   h1 {
     color: transparent; /*カラーが透明になる*/
-    float: left;
     margin: 0;
-    padding: 15px 30px;
+    padding: 15px 100px;
     /* 3つの色を45度の角度でグラデーションさせてから、バックグラウンドのサイズを600%とオーバーサイズにすることで画面には1色がアップされて表示される */
     background: linear-gradient(45deg, #6cb8ff, #fff66c, #ffa36c);
     background-size: 600% 600%;
@@ -77,8 +76,8 @@ const StyledComponent = styled(Component)`
     list-style: none; /*点を消す*/
     display: flex; /*横並びにする*/
     margin: 0;
-    padding: 30px 0;
-    justify-content: center; /*揃え位置を指定する*/
+    padding: 15px 35px;
+    /* justify-content: center; 揃え位置を指定する */
   }
 `
 
@@ -88,7 +87,6 @@ const Container: React.FC<ContainerProps> = props => {
     { label: 'nepota?', page: '/' },
     { label: 'blog / recipe', page: '/blog' },
     { label: 'puuuu?', page: '/puuuu' },
-    { label: 'contact', page: '/contact' },
     { label: 'animations', page: '/animations/index' }
   ]
 
