@@ -10,7 +10,8 @@ type Props = { className: string } & ContainerProps
 const Component: React.FC<Props> = props => (
   <div className={props.className}>
     <p>
-      一緒に暮らしているノルウェーフォレストキャットのプータローです。 <br />
+      一緒に暮らしているノルウェーフォレストキャットのプータローです。
+      <br />
       通称ぷーち。 性別は男です。
       <br />
       生まれは2019年8月15日。
@@ -26,8 +27,8 @@ const Component: React.FC<Props> = props => (
 // (4) Style層
 const StyledComponent = styled(Component)`
   color: black;
-  margin: 0 auto;
   width: 600px;
+  padding: 15px 100px;
   > .putaro {
     /* positionは、relativeで範囲を決めてabsoluteで動かそう！ */
     position: relative;

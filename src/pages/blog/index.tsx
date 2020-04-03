@@ -43,7 +43,7 @@ const Component: React.FC<Props> = props => (
 
 const StyledComponent = styled(Component)`
   color: black;
-  margin: 0 auto;
+  padding: 15px 100px;
   width: 600px;
   * > a {
     color: #888;
