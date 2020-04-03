@@ -28,6 +28,8 @@ const Component: React.FC<Props> = props => (
 )
 
 const StyledComponent = styled(Component)`
+/* letter-spacingは文字の間隔 */
+letter-spacing: 1px;
   > a {
     color: #888;
     transition: 0.2s;
@@ -37,18 +39,19 @@ const StyledComponent = styled(Component)`
     border-radius: 10px; /* 角の丸み*/
   }
   > a.active {
-    color: black;
+    color: #0B2438;8;
     font-weight: bold;
     padding: 0.5em 1em;
     background: #fff;
     border-radius: 10px; /* 角の丸み*/
-    /* border: dashed 2px black; 点線*/
+    /* border: dashed 2px #0B2438;8; 点線*/
   }
   > a:hover {
     background: #fff;
-    color: black;
+    color: #0B2438;8;
     border-radius: 10px; /* 角の丸み*/
     padding: 0.5em 1em;
+    transition: all 0.3s ease-in-out;
   }
 `
 

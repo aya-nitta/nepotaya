@@ -42,7 +42,9 @@ const Component: React.FC<Props> = props => (
 )
 
 const StyledComponent = styled(Component)`
-  color: black;
+  color: #0b2438;
+  /* letter-spacingは文字の間隔 */
+  letter-spacing: 1px;
   padding: 15px 100px;
   width: 600px;
   * > a {
@@ -50,7 +52,7 @@ const StyledComponent = styled(Component)`
     text-decoration: none; /* リンクの下線を消す */
   }
   * > a:hover {
-    color: black;
+    color: #0b2438;
   }
   .posted {
     color: #888;

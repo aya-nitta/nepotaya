@@ -38,7 +38,9 @@ const Component: React.FC<Props> = props => {
 }
 
 const StyledComponent = styled(Component)`
-  color: black;
+  color: #0b2438;
+  /* letter-spacingは文字の間隔 */
+  letter-spacing: 1px;
   float: right;
   padding: 0px 30px;
   border: 10px double #888;

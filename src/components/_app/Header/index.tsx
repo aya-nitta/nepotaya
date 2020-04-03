@@ -1,4 +1,3 @@
-// (1) import層
 import React from 'react'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
@@ -39,7 +38,9 @@ const Component: React.FC<ComponentProps> = props => (
 
 // // (4) Style層
 const StyledComponent = styled(Component)`
-  color: black;
+  color: #0b2438;
+  /* letter-spacingは文字の間隔 */
+  letter-spacing: 1px;
   h1 {
     color: transparent; /*カラーが透明になる*/
     margin: 0;

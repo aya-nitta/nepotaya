@@ -37,7 +37,9 @@ const Component: React.FC<Props> = props => (
 )
 // (4) Style層
 const StyledComponent = styled(Component)`
-  color: black;
+  color: #0b2438;
+  /* letter-spacingは文字の間隔 */
+  letter-spacing: 1px;
   text-align: center;
   body {
     margin: 0;
@@ -113,14 +115,14 @@ const StyledComponent = styled(Component)`
     padding: 5px;
   }
   ul.mokuzi > * > a:active {
-    color: black;
+    color: #0b2438;
   }
   ul.mokuzi > * > a:hover {
-    color: black;
+    color: #0b2438;
   }
 
   ul.mokuzi {
-    color: black;
+    color: #0b2438;
     margin: auto;
     width: 500px; /* 目次全体 */
     padding: 0;
