@@ -1,17 +1,35 @@
-import * as React from 'react'
-import ExtLink from '../components/ext-link'
+import React from 'react'
+import styled from 'styled-components'
 import Header from '~/components/_app/Header'
-import Contact from '~/components/_app/Contact'
+import Footer from '~/components/_app/Footer'
+import TimeLine from '~/components/_app/TimeLine'
+import { AppProps } from 'next/app'
+import { config } from '~/utils/config'
 
-const Component = ({ Component, pageProps }): React.ReactElement => (
-  <>
-    <Header />
-    <Contact />
-    <Component {...pageProps} />
-    <footer>
-      <ExtLink href="https://zeit.co/new/project?template=https://github.com/ijjk/notion-blog/tree/master" />
-    </footer>
-  </>
+type ContainerProps = AppProps
+type ComponentProps = {
+  className: string
+} & ContainerProps
+
+const Component: React.FC<ComponentProps> = props => (
+  <div className={props.className}>
+    <body>
+      <Header />
+      <TimeLine />
+      <props.Component {...props.pageProps} />
+      <Footer />
+    </body>
+  </div>
 )
 
-export default Component
+const StyledComponent = styled(Component)`
+  max-width: 1100px;
+  margin: 0px auto;
+  padding: 0px 1.5em;
+`
+
+const Container: React.FC<ContainerProps> = props => {
+  return <StyledComponent className="_app" {...props} />
+}
+
+export default Container

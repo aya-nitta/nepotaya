@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 import ExtLink from '~/components/ext-link'
+import { config } from '~/utils/config'
 
 type ContainerProps = {
   page: string
@@ -28,18 +29,20 @@ const Component: React.FC<Props> = props => (
 )
 
 const StyledComponent = styled(Component)`
-/* letter-spacingは文字の間隔 */
-letter-spacing: 1px;
+  letter-spacing: 3px;
+  color: ${config.domasoBlack};
   > a {
+    position: relative;
+    display: inline-block;
     color: #888;
     transition: 0.2s;
     text-decoration: none; /* リンクの下線を消す */
-    margin: 50px;
+    margin: 0px 50px;
     padding: 0.5em 1em;
     border-radius: 10px; /* 角の丸み*/
   }
   > a.active {
-    color: #0B2438;8;
+    color: #0b2438;
     font-weight: bold;
     padding: 0.5em 1em;
     background: #fff;
@@ -48,10 +51,28 @@ letter-spacing: 1px;
   }
   > a:hover {
     background: #fff;
-    color: #0B2438;8;
+    color: #0b2438;
     border-radius: 10px; /* 角の丸み*/
     padding: 0.5em 1em;
     transition: all 0.3s ease-in-out;
+  }
+  > a:after {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    /* contentを記載するとafterが使用できる */
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: ${config.domasoBlack};
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+  > a:hover:after {
+    bottom: 0px;
+    opacity: 1;
+    visibility: visible;
   }
 `
 

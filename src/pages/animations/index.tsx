@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { config } from '~/utils/config'
 
 // (2) Types層
 type ContainerProps = {}
@@ -8,7 +9,10 @@ type Props = { className: string } & ContainerProps
 // (3) DOM層
 const Component: React.FC<Props> = props => (
   <div className={props.className}>
-    <div className="smoke">
+    <h3>ここではアニメーションを載せています！！</h3>
+    <p>ご自由にコピペしてお使いくださいませ。</p>
+    <hr />
+    {/* <div className="smoke">
       <span>a</span>
       <span>n</span>
       <span>i</span>
@@ -19,7 +23,7 @@ const Component: React.FC<Props> = props => (
       <span>o</span>
       <span>n</span>
     </div>
-    <video src="/smoke.mp4" id="video" autoPlay muted />
+    <video src="/smoke.mp4" id="video" autoPlay muted /> */}
     <ul className="mokuzi">
       <li>目次</li>
       <li>
@@ -37,15 +41,15 @@ const Component: React.FC<Props> = props => (
 )
 // (4) Style層
 const StyledComponent = styled(Component)`
-  color: #0b2438;
-  /* letter-spacingは文字の間隔 */
-  letter-spacing: 1px;
-  text-align: center;
+  color: ${config.domasoBlack};
+  letter-spacing: 3px;
+  width: 600px;
+  padding: 15px 100px;
   body {
     margin: 0;
     padding: 0;
   }
-  .smoke {
+  /* .smoke {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -59,10 +63,10 @@ const StyledComponent = styled(Component)`
     height: 1px;
     position: absolute;
     top: 60%; /*線の位置 */
-    animation: lineReveal 0.3s ease-in-out forwards;
-  }
+  /* animation: lineReveal 0.3s ease-in-out forwards; */
+  /* } */
   /* #はID名 */
-  #video {
+  /* #video {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -70,18 +74,18 @@ const StyledComponent = styled(Component)`
     height: auto;
     background-size: cover;
     z-index: -1;
-  }
+  } */
   /* 線が左から右へ動く*/
-  @keyframes lineReveal {
+  /* @keyframes lineReveal {
     0% {
       left: 0%;
     }
     100% {
       left: 25%;
     }
-  }
+  } */
   /* テキストが下から上へ動く*/
-  @keyframes textReveal {
+  /* @keyframes textReveal {
     0%,
     60% {
       margin-top: 100px;
@@ -99,15 +103,16 @@ const StyledComponent = styled(Component)`
     display: inline-block;
     width: 2%;
     height: 50%; /*文字が出てくる位置*/
-    padding: 10px;
+  /* padding: 10px;
     text-align: center;
     line-height: 40px;
     animation: textReveal 0.8s ease-out both;
-  }
+  } */
   ul {
     list-style: none; /*点を消す*/
   }
   ul.mokuzi > * > a {
+    text-align: center;
     text-decoration: none; /* 下線を消す */
     display: block;
     border-top: 1px dotted #ddd; /* 上線の細かい点線 */
@@ -122,9 +127,8 @@ const StyledComponent = styled(Component)`
   }
 
   ul.mokuzi {
+    text-align: center;
     color: #0b2438;
-    margin: auto;
-    width: 500px; /* 目次全体 */
     padding: 0;
     font-weight: bold;
     background: #fff;

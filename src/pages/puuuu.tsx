@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { config } from '~/utils/config'
 
 // (2) Types層
 type ContainerProps = {}
@@ -8,6 +9,7 @@ type Props = { className: string } & ContainerProps
 // (3) DOM層
 const Component: React.FC<Props> = props => (
   <div className={props.className}>
+    <h3>コンニチハ！！</h3>
     <p>
       一緒に暮らしているノルウェーフォレストキャットのプータローです。
       <br />
@@ -17,6 +19,7 @@ const Component: React.FC<Props> = props => (
       <br />
       オモチャください。
     </p>
+    <hr />
     <div className="putaro">
       <div className="background" />
       <img src="/puuuu.png" />
@@ -26,14 +29,18 @@ const Component: React.FC<Props> = props => (
 
 // (4) Style層
 const StyledComponent = styled(Component)`
-  color: #0b2438;
-  /* letter-spacingは文字の間隔 */
-  letter-spacing: 1px;
+  color: ${config.domasoBlack};
+  letter-spacing: 3px;
   width: 600px;
   padding: 15px 100px;
   > .putaro {
     /* positionは、relativeで範囲を決めてabsoluteで動かそう！ */
+    display: block;
+    /* 中央寄せ */
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
+    /* 中央寄せここまで */
     width: 200px;
     height: 200px;
   }

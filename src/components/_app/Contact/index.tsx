@@ -1,8 +1,10 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { config } from '~/utils/config'
 import ExtLink from '../../ext-link'
 import Instagram from '../../svgs/instagram'
 import Twitter from '../../svgs/twitter'
+import Note from '../../svgs/note'
 import Email from '../../svgs/email'
 
 type ContainerProps = {}
@@ -25,44 +27,32 @@ const Component: React.FC<Props> = props => {
           </ExtLink>
         )
       })}
-      <p>⬆️こちらからお問い合わせください！</p>
-      <a
-        className="twitter-timeline"
-        data-width="300"
-        data-height="800"
-        href="https://twitter.com/_nenenemo?ref_src=twsrc%5Etfw"
-      />
-      <script async src="https://platform.twitter.com/widgets.js" />
     </div>
   )
 }
 
 const StyledComponent = styled(Component)`
-  color: #0b2438;
-  /* letter-spacingは文字の間隔 */
-  letter-spacing: 1px;
+  color: ${config.domasoBlack};
+  letter-spacing: 3px;
   float: right;
   padding: 0px 30px;
-  border: 10px double #888;
+  border: 10px;
   background: #fff;
   border-radius: 10px;
-  .contact {
-  }
   p {
     margin: 0;
   }
   svg {
-    padding: 8px 8px;
+    padding: 30px 8px;
   }
-  a.twitter-timeline {
+  /* a.twitter-timeline {
     text-decoration: none; /* リンクの下線を消す */
-  }
-  path.active-path:hover {
-    color: white;
+  /* } */
+  a:hover path {
+    fill: ${config.domasoBlack};
   }
 `
 
-//src/components/svg
 const Container: React.FC = props => {
   const contacts = [
     {
@@ -74,6 +64,11 @@ const Container: React.FC = props => {
       Icon: Instagram,
       alt: 'instagram icon',
       link: 'https://www.instagram.com/_nenenemu'
+    },
+    {
+      Icon: Note,
+      alt: 'note icon',
+      link: 'https://note.com/nepotaya'
     },
     {
       Icon: Email,
