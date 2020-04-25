@@ -19,7 +19,7 @@ const Component: React.FC<Props> = props => (
       <br />
       PUBG MOBILEのID （6106283530）
     </p>
-    <br />
+    <hr />
     <h3>Skillset</h3>
     <p>
       HTML , CSS
@@ -30,8 +30,7 @@ const Component: React.FC<Props> = props => (
 // (4) Style層
 const StyledComponent = styled(Component)`
   width: 600px;
-  /* letter-spacingは文字の間隔 */
-  letter-spacing: 1px;
+  letter-spacing: 3px;
   color: #0b2438;
   padding: 15px 100px;
   /* ブロック、インラインブロックの違いに注意 */

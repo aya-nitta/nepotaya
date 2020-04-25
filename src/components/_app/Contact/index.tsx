@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+
 import { config } from '~/utils/config'
 import ExtLink from '../../ext-link'
 import Instagram from '../../svgs/instagram'

@@ -23,7 +23,7 @@ type Props = {
 
 const Component: React.FC<Props> = props => (
   <div className={props.className}>
-    {props.posts.length === 0 && <p>There are no posts yet</p>}
+    {props.posts.length === 0}
     {props.posts.map(post => {
       return (
         <div key={post.Slug}>
@@ -43,8 +43,7 @@ const Component: React.FC<Props> = props => (
 
 const StyledComponent = styled(Component)`
   color: #0b2438;
-  /* letter-spacingは文字の間隔 */
-  letter-spacing: 1px;
+  letter-spacing: 3px;
   padding: 15px 100px;
   width: 600px;
   * > a {
