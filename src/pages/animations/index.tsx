@@ -131,7 +131,6 @@ const StyledComponent = styled(Component)`
     color: #0b2438;
     padding: 0;
     font-weight: bold;
-    background: #fff;
     border: dashed 1px #eee; /*点線 */
     border-radius: 10px; /*角の丸み*/
   }

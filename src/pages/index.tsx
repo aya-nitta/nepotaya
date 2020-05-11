@@ -13,7 +13,11 @@ const Component: React.FC<Props> = props => (
     <p>
       ネポタと申します。 性別は女です。
       <br />
-      旦那さんと猫と一緒に毎日楽しく過ごしています。
+      <a href="https://twitter.com/soichiro_nitta" target="_blank">
+        旦那さん
+      </a>
+      と<a href="/puuuu">猫</a>
+      と一緒に毎日楽しく過ごしています。
       <br />
       よくツイッターにおりますので、気軽にリプください。
       <br />
@@ -34,6 +38,13 @@ const StyledComponent = styled(Component)`
   color: #0b2438;
   padding: 15px 100px;
   /* ブロック、インラインブロックの違いに注意 */
+  p > a {
+    color: #888;
+    text-decoration: none;
+  }
+  p > a:hover {
+    color: #0b2438;
+  }
 `
 // (5) Container層
 const Container: React.FC = props => {

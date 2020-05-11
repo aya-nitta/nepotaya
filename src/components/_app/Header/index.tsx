@@ -87,7 +87,11 @@ const StyledComponent = styled(Component)`
     display: flex; /*横並びにする*/
     margin: 0;
     padding: 15px 35px;
-    /* justify-content: center; 揃え位置を指定する */
+    /* justify-content: center; */
+  }
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    flex-direction: column;
   }
 `
 
@@ -96,7 +100,7 @@ const Container: React.FC<ContainerProps> = props => {
   const navItems: NavItemsTypes = [
     { label: 'nepota?', page: '/' },
     // { label: 'blog / recipe', page: '/blog' },
-    { label: '🐈', page: '/puuuu' },
+    // { label: '🐈', page: '/puuuu' },
     { label: 'animations', page: '/animations/index' }
   ]
 

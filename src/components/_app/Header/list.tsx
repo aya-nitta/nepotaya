@@ -45,12 +45,10 @@ const StyledComponent = styled(Component)`
     color: #0b2438;
     font-weight: bold;
     padding: 0.5em 1em;
-    background: #fff;
     border-radius: 10px; /* 角の丸み*/
     /* border: dashed 2px #0B2438;8; 点線*/
   }
   > a:hover {
-    background: #fff;
     color: #0b2438;
     border-radius: 10px; /* 角の丸み*/
     padding: 0.5em 1em;
@@ -73,6 +71,10 @@ const StyledComponent = styled(Component)`
     bottom: 0px;
     opacity: 1;
     visibility: visible;
+  }
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    flex-direction: column;
   }
 `
 

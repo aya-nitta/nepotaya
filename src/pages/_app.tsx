@@ -23,9 +23,24 @@ const Component: React.FC<ComponentProps> = props => (
 )
 
 const StyledComponent = styled(Component)`
+  min-height: 100vh;
+  min-width: 100vh;
+  display: flex;
   max-width: 1100px;
   margin: 0px auto;
   padding: 0px 1.5em;
+  @media screen and (max-width: 480px) {
+    body {
+      width: 100%;
+      flex-direction: column;
+    }
+    body > header {
+      order: -1;
+    }
+    body > footer {
+      order: 2;
+    }
+  }
 `
 
 const Container: React.FC<ContainerProps> = props => {

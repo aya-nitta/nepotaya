@@ -38,8 +38,6 @@ const StyledComponent = styled(Component)`
   float: right;
   padding: 0px 30px;
   border: 10px;
-  background: #fff;
-  border-radius: 10px;
   p {
     margin: 0;
   }
@@ -51,6 +49,10 @@ const StyledComponent = styled(Component)`
   /* } */
   a:hover path {
     fill: ${config.domasoBlack};
+  }
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    flex-direction: column;
   }
 `
 

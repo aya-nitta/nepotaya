@@ -30,23 +30,13 @@ const StyledComponent = styled(Component)`
   color: ${config.domasoBlack};
   letter-spacing: 3px;
   float: right;
-  padding: 0px 30px;
-  border: 10px;
-  background: #fff;
-  border-radius: 10px;
-  .contact {
-  }
-  p {
-    margin: 0;
-  }
-  svg {
-    padding: 30px 8px;
-  }
   a.twitter-timeline {
     text-decoration: none; /* リンクの下線を消す */
   }
-  path.active-path:hover {
-    color: white;
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    flex-direction: column;
+    flex: 3;
   }
 `
 

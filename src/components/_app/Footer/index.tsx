@@ -37,6 +37,11 @@ const StyledComponent = styled(Component)`
     position: absolute; /*←絶対位置*/
     bottom: 0; /*下に固定*/
   }
+  @media screen and (max-width: 479px) {
+    width: 100%;
+    flex-direction: column;
+    flex: -1;
+  }
 `
 
 // (5) Container層
